@@ -1,0 +1,70 @@
+{% extends 'base1.html' %}
+	{% load static %}
+	{% block content %}
+
+			<!-- start banner Area -->
+
+			<!-- Start search-course Area -->
+			<section class="search-course-area relative">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+
+						<div class="col-lg-4 col-md-6 search-course-right section-gap">
+							<form class="form-wrap" action="#">
+
+							</form>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End search-course Area -->
+			
+		
+			<!-- Start upcoming-event Area -->
+
+			<!-- Start blog Area -->
+			<section class="blog-area section-gap" id="blog">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="banner-content col-lg-9 col-md-12">
+							<h1 class="text-uppercase">
+								Fake news detection is crucial
+								protect public trust
+
+							</h1>
+							<p class="pt-10 pb-10">
+								Detecting fake news is essential to combat misinformation, safeguard democracy, and promote factual awareness.
+							</p>
+							<a href="#" class="primary-btn text-uppercase">Welcome</a>
+							<a href="{% url 'upload' %}" class="primary-btn text-uppercase">Report News</a>
+							<a href="{% url 'article_list' %}" class="primary-btn text-uppercase">Latest News</a>
+							</div>
+					</div>					
+					<div class="row">
+
+
+
+
+					</div>
+				</div>	
+			</section>
+			<!-- End blog Area -->			
+			
+
+			<!-- Start cta-two Area -->
+			<section class="cta-two-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 cta-left">
+							<h1>Not Yet Satisfied with our Trend?</h1>
+						</div>
+						<div class="col-lg-4 cta-right">
+							<a class="primary-btn wh" href="#">view our blog</a>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End cta-two Area -->
+						
+			{% endblock content %}	

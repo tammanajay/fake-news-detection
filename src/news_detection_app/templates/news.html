@@ -1,0 +1,77 @@
+{% extends 'base1.html' %}
+	{% load static %}
+	{% block content %}
+
+			<!-- start banner Area -->
+
+			<!-- Start search-course Area -->
+			<section class="search-course-area relative">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-6 col-md-6 search-course-left">
+							<h1 class="text-white">
+
+							</h1>
+							<p></p>
+							<div class="row details-content">
+								<div class="col single-detials">
+								</div>
+								<div class="col single-detials">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 search-course-right section-gap">
+							<form class="form-wrap" action="#">
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End search-course Area -->
+
+
+			<!-- Start upcoming-event Area -->
+
+			<!-- Start blog Area -->
+			<section class="blog-area section-gap" id="blog">
+				<div class="container">
+
+					<div class="row">
+
+
+						{% for article in articles %}
+
+						<div class="col-lg-3 col-md-6 single-blog">
+							<a href="{% url 'article_detail' article.id %}">
+								<h5>{{ article.title|slice:":45" }}</h5>
+							</a>
+								<p>{{ article.content|slice:":120" }}...</p>
+							<a href="{% url 'article_detail' article.id %}" class="details-btn d-flex justify-content-center align-items-center"><span class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
+						</div>
+
+						{% endfor %}
+
+					</div>
+				</div>
+			</section>
+			<!-- End blog Area -->
+
+
+			<!-- Start cta-two Area -->
+			<section class="cta-two-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 cta-left">
+							<h1>Not Yet Satisfied with our Trend?</h1>
+						</div>
+						<div class="col-lg-4 cta-right">
+							<a class="primary-btn wh" href="#">view our blog</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End cta-two Area -->
+
+			{% endblock content %}
